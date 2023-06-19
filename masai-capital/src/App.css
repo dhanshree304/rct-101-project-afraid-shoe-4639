@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.Home {
+  background-image: url("./Assets/Home_bg_img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,4 +41,328 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.signup-form-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.signup-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* About.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* ProductPage.css */
+
+.product-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-card {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.product-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-description {
+  color: #777;
+}
+
+
+/* PerformancePage.css */
+
+.performance-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.performance-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.performance-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.performance-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.performance-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.performance-card:hover .performance-overlay {
+  opacity: 1;
+}
+
+.performance-year {
+  color: #fff;
+  font-size: 24px;
+}
+/* ContactPage.css */
+
+.contact-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+ margin-top: 30px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+
+/* ContactForm.css */
+
+.contact-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type='submit'] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* FormsPage.css */
+
+.forms-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.forms-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.form-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.form-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-card:hover .form-overlay {
+  opacity: 1;
+}
+
+.form-title {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-download-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

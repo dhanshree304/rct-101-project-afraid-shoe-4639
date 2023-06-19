@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -15,31 +15,34 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleLogin = (e) => {
+  const handleSignUp = (e) => {
     e.preventDefault();
     setError("");
 
-    // Retrieve user data from localStorage
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    const user = users.find(
-      (u) => u.email === email && u.password === password
-    );
+    const existingUser = users.find((u) => u.email === email);
 
-    if (user) {
-      // Successful login
-      alert("Login successful!");
-      navigate("/");
+    if (existingUser) {
+      setError("User with the provided email already exists.");
     } else {
-      // Error handling
-      setError("Invalid email or password.");
+      const newUser = {
+        email,
+        password,
+      };
+      users.push(newUser);
+
+      localStorage.setItem("users", JSON.stringify(users));
+
+      alert("Sign up successful!");
+      navigate("/login");
     }
   };
 
   return (
-    <div className="login-form-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin} className="login-form">
+    <div className="signup-form-container">
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSignUp} className="signup-form">
         <input
           type="email"
           placeholder="Email"
@@ -55,10 +58,10 @@ const Login = () => {
           required
         />
         {error && <p className="error-message">{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default SignUp;
